@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#eaf7ff">
+
+    <title>Studio Deborah Cristinny | Beleza & Estética</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <style>
+
+        /* ===== NOIVAS | STUDIO DEBORAH CRISTINNY ===== */
+
+        .noivas-section{
+
+            max-width:1280px;margin:0 auto;padding:110px 6%;
+
+            display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center;
+
+            background:
+
+              radial-gradient(circle at 12% 18%,rgba(205,235,250,.75),transparent 32%),
+
+              linear-gradient(135deg,#f8fcff 0%,#eef9ff 52%,#fff 100%);
+
+            border-radius:38px;overflow:hidden;position:relative;
+
+        }
+
+        .noivas-section:before{
+
+            content:"";position:absolute;inset:20px;border:1px solid rgba(184,151,75,.18);
+
+            border-radius:28px;pointer-events:none;
+
+        }
+
+        .noivas-intro{position:relative;z-index:2}
+
+        .noivas-kicker{font:500 11px/1.2 "Montserrat",sans-serif;letter-spacing:.28em;color:#9a7b35;margin-bottom:22px}
+
+        .noivas-kicker span{margin-right:9px;color:#c6a55a}
+
+        .noivas-intro h2{font:500 clamp(42px,5vw,72px)/.98 "Cormorant Garamond",serif;color:#183343;margin:0 0 26px}
+
+        .noivas-intro h2 em{font-weight:400;color:#87bcd8}
+
+        .noivas-intro p{font:300 15px/1.9 "Montserrat",sans-serif;color:#5c6d76;max-width:520px;margin-bottom:27px}
+
+        .noivas-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+
+        .noivas-tags span{padding:9px 13px;border:1px solid rgba(128,183,211,.38);border-radius:999px;background:rgba(255,255,255,.72);font:500 9px "Montserrat",sans-serif;letter-spacing:.14em;color:#54798d}
+
+        .noivas-whatsapp{display:inline-flex;align-items:center;gap:20px;text-decoration:none;padding:17px 22px;background:#183343;color:#fff;border-radius:4px;font:500 10px "Montserrat",sans-serif;letter-spacing:.14em;box-shadow:0 16px 36px rgba(24,51,67,.15);transition:.3s}
+
+        .noivas-whatsapp:hover{transform:translateY(-3px);background:#21475d}
+
+        .noivas-whatsapp b{font-size:18px;font-weight:300}
+
+        .noivas-carousel-wrap{position:relative;min-width:0}
+
+        .noivas-carousel{position:relative;height:600px;border-radius:180px 180px 22px 22px;overflow:hidden;box-shadow:0 28px 65px rgba(43,94,121,.18)}
+
+        .noivas-slide{position:absolute;inset:0;opacity:0;transform:scale(1.035);transition:opacity .75s ease,transform 1.1s ease;pointer-events:none}
+
+        .noivas-slide.active{opacity:1;transform:scale(1);pointer-events:auto}
+
+        .noivas-slide:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(12,31,42,.76),transparent 48%)}
+
+        .noivas-slide img{width:100%;height:100%;object-fit:cover;display:block}
+
+        .noivas-caption{position:absolute;z-index:2;left:34px;right:34px;bottom:32px;color:#fff;display:flex;gap:17px;align-items:center}
+
+        .noivas-caption>span{width:44px;height:44px;border:1px solid rgba(255,255,255,.55);border-radius:50%;display:grid;place-items:center;font:400 11px "Montserrat",sans-serif}
+
+        .noivas-caption strong{display:block;font:500 26px "Cormorant Garamond",serif;margin-bottom:3px}
+
+        .noivas-caption small{font:300 11px/1.5 "Montserrat",sans-serif;opacity:.9}
+
+        .noivas-arrow{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:48px;height:48px;border:1px solid rgba(255,255,255,.72);border-radius:50%;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);color:#24495d;font:300 30px/1 serif;cursor:pointer;box-shadow:0 8px 25px rgba(0,0,0,.12);transition:.25s}
+
+        .noivas-arrow:hover{background:#fff;transform:translateY(-50%) scale(1.07)}
+
+        .noivas-prev{left:18px}.noivas-next{right:18px}
+
+        .noivas-dots{display:flex;justify-content:center;gap:8px;margin-top:22px}
+
+        .noivas-dots button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#c8dce7;cursor:pointer;transition:.3s}
+
+        .noivas-dots button.active{width:30px;border-radius:999px;background:#b49a5c}
+
+        @media(max-width:900px){
+
+            .noivas-section{grid-template-columns:1fr;gap:42px;padding:78px 24px;border-radius:28px}
+
+            .noivas-intro{text-align:center}.noivas-intro p{margin-left:auto;margin-right:auto}
+
+            .noivas-tags{justify-content:center}.noivas-carousel{height:520px;border-radius:130px 130px 20px 20px}
+
+        }
+
+        @media(max-width:560px){
+
+            .noivas-section{padding:64px 18px}.noivas-section:before{inset:10px}
+
+            .noivas-intro h2{font-size:44px}.noivas-carousel{height:450px;border-radius:100px 100px 18px 18px}
+
+            .noivas-caption{left:22px;right:22px;bottom:24px}.noivas-caption strong{font-size:22px}
+
+            .noivas-caption small{font-size:10px}.noivas-arrow{width:42px;height:42px}
+
+            .noivas-whatsapp{width:100%;justify-content:center;text-align:center}
+
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+
+    <!-- ========================= HEADER ========================= -->
+
+    <header class="header" id="header">
+
+        <a href="#inicio" class="brand">
+
+            <span class="brand-name">Studio Deborah Cristinny</span>
+
+            <span class="brand-subtitle">BELEZA & ESTÉTICA</span>
+
+        </a>
+
+
+
+        <nav class="nav" id="nav">
+
+            <a href="#inicio">INÍCIO</a>
+
+            <a href="#sobre">SOBRE</a>
+
+            <a href="#servicos">SERVIÇOS</a>
+
+            <a href="#equipe">EQUIPE</a>
+
+            <a href="#cursos">CURSOS</a>
+
+            <a href="#galeria">GALERIA</a>
+
+            <a href="#noivas">NOIVAS</a>
+
+            <a href="#contato">CONTATO</a>
+
+            <a class="nav-agendar" target="_blank" href="https://wa.me/5561993708694">AGENDAR</a>
+
+        </nav>
+
+
+
+        <button class="menu-mobile" id="menu-mobile" aria-label="Abrir menu mobile">
+
+            <span></span>
+
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+
+    <main>
+
+        <!-- ========================= HERO ========================= -->
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <div class="location-badge">
+
+                    <span class="sparkle">✦</span> LUZIÂNIA — GO
+
+                </div>
+
+
+
+                <h1>
+
+                    Beleza, autoestima <em>e sofisticação</em> em cada detalhe
+
+                </h1>
+
+
+
+                <p class="hero-description">
+
+                    Uma equipe completa para cuidar de você com profissionalismo, delicadeza e excelência.
+
+                </p>
+
+
+
+                <div class="hero-actions">
+
+                    <a class="btn-primary" target="_blank" href="https://wa.me/5561993708694">
+
+                        <span>AGENDAR PELO WHATSAPP</span>
+
+                        <b>→</b>
+
+                    </a>
+
+                    <a href="#servicos" class="btn-secondary">VER SERVIÇOS</a>
+
+                </div>
+
+
+
+                <div class="google-rating">
+
+                    <div class="stars">★ ★ ★ ★ ★</div>
+
+                    <div class="rating-number">
+
+                        <strong>5,0</strong>
+
+                        <span>NO GOOGLE · 41 AVALIAÇÕES</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hero-image-area">
+
+                <div class="hero-image">
+
+                    <img src="studio deb.jpg" alt="Studio Deborah Cristinny - Beleza e Estética">
+
+                </div>
+
+                <div class="attendance-card">
+
+                    <strong>+10.000</strong>
+
+                    <span>ATENDIMENTOS</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= SOBRE ========================= -->
+
+        <section class="sobre-studio" id="sobre">
+
+            <div class="sobre-container">
+
+                <div class="sobre-visual">
+
+                    <div class="sobre-foto">
+
+                        <img src="98d7669b-4053-4203-9d27-7afa29907e09.jpg" alt="Ambiente aconchegante do Studio Deborah Cristinny">
+
+                    </div>
+
+
+
+                    <span class="sobre-circulo sobre-circulo-topo"></span>
+
+                    <span class="sobre-circulo sobre-circulo-baixo"></span>
+
+
+
+                    <div class="sobre-mini-card">
+
+                        <span>✦</span>
+
+                        <div>
+
+                            <strong>Cuidado em cada detalhe</strong>
+
+                            <small>Beleza • Autoestima • Bem-estar</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="sobre-conteudo">
+
+                    <div class="sobre-kicker">
+
+                        <span>SOBRE O STUDIO</span>
+
+                        <i></i>
+
+                    </div>
+
+
+
+                    <h2>
+
+                        Um espaço dedicado à sua <em>transformação</em>
+
+                    </h2>
+
+
+
+                    <p>
+
+                        O Studio Deborah Cristinny Beleza & Estética foi criado para oferecer uma experiência completa de beleza, autoestima e cuidado. Aqui, cada atendimento é pensado para que você se sinta acolhida, valorizada e ainda mais confiante.
+
+                    </p>
+
+                    <p>
+
+                        Com uma equipe completa e serviços especializados, reunimos profissionalismo, delicadeza e atenção aos detalhes.
+
+                    </p>
+
+
+
+                    <div class="sobre-tags">
+
+                        <span>CÍLIOS</span>
+
+                        <span>SOBRANCELHAS</span>
+
+                        <span>ESTÉTICA</span>
+
+                        <span>MAQUIAGEM</span>
+
+                    </div>
+
+
+
+                    <a class="sobre-link" target="_blank" href="https://wa.me/5561993708694">
+
+                        CONHECER O STUDIO <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= NÚMEROS ========================= -->
+
+        <section class="numeros">
+
+            <div class="section-head dark">
+
+                <span>NOSSA TRAJETÓRIA</span>
+
+                <h2>Números que refletem <em>confiança</em></h2>
+
+            </div>
+
+
+
+            <div class="numeros-grid">
+
+                <div>
+
+                    <strong data-counter="10000" data-prefix="+">+10.000</strong>
+
+                    <i></i>
+
+                    <span>ATENDIMENTOS REALIZADOS</span>
+
+                </div>
+
+                <div>
+
+                    <strong data-counter="120" data-prefix="+">+120</strong>
+
+                    <i></i>
+
+                    <span>ALUNAS FORMADAS</span>
+
+                </div>
+
+                <div>
+
+                    <strong data-counter="5" data-decimal="1">5,0</strong>
+
+                    <b>★</b>
+
+                    <i></i>
+
+                    <span>AVALIAÇÃO NO GOOGLE</span>
+
+                </div>
+
+                <div>
+
+                    <strong data-counter="41" data-prefix="+">+41</strong>
+
+                    <i></i>
+
+                    <span>AVALIAÇÕES POSITIVAS</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= SERVIÇOS ========================= -->
+
+        <section class="servicos-section" id="servicos">
+
+            <div class="section-head">
+
+                <span>NOSSOS SERVIÇOS</span>
+
+                <h2>Uma curadoria de <em>transformações</em></h2>
+
+                <p>Cada serviço é pensado para realçar a sua beleza natural com técnica, cuidado e sofisticação.</p>
+
+            </div>
+
+
+
+            <div class="servicos-grid">
+
+                <article class="card-servico">
+
+                    <div class="servico-img">
+
+                        <img src="WhatsApp Image 2026-09-21 at 13.16.43 (1).jpeg" alt="Extensão de cílios">
+
+                        <div class="servico-info">
+
+                            <h3>Extensão de cílios</h3>
+
+                            <p>Olhar marcante e natural, com fios aplicados um a um para realçar sua beleza.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20Extensão%20de%20cílios" target="_blank">AGENDAR →</a>
+
+                </article>
+
+
+
+                <article class="card-servico">
+
+                    <div class="servico-img">
+
+                        <img src="WhatsApp Image 2026-09-21 at 13.16.55 (1).jpeg" alt="Design de sobrancelhas">
+
+                        <div class="servico-info">
+
+                            <h3>Design de sobrancelhas</h3>
+
+                            <p>Com ou sem henna, para um olhar harmonizado e estruturado ao seu rosto.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20Design%20de%20sobrancelhas" target="_blank">AGENDAR →</a>
+
+                </article>
+
+
+
+                <article class="card-servico">
+
+                    <div class="servico-img">
+
+                        <img src="fd2b88ae-31c6-441f-a214-f65b6462f675.jpg" alt="Brow Lamination">
+
+                        <div class="servico-info">
+
+                            <h3>Brow Lamination</h3>
+
+                            <p>Alinhamento dos fios para sobrancelhas cheias, definidas e duradouras.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20Brow%20Lamination" target="_blank">AGENDAR →</a>
+
+                </article>
+
+
+
+                <article class="card-servico">
+
+                    <div class="servico-img">
+
+                        <img src="WhatsApp Image 2026-09-28 at 13.58.00 (1).jpeg" alt="Lash Lifting">
+
+                        <div class="servico-info">
+
+                            <h3>Lash Lifting</h3>
+
+                            <p>Curvatura natural dos seus cílios com efeito de máscara por semanas.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20Lash%20Lifting" target="_blank">AGENDAR →</a>
+
+                </article>
+
+
+
+                <article class="card-servico">
+
+                    <div class="servico-img">
+
+                        <img src="WhatsApp Image 2026-09-28 at 14.01.30.jpeg" alt="Maquiagem profissional">
+
+                        <div class="servico-info">
+
+                            <h3>Maquiagem profissional</h3>
+
+                            <p>Make para eventos, noivas ou para o dia a dia, realçando sua essência.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20Maquiagem%20profissional" target="_blank">AGENDAR →</a>
+
+                </article>
+
+
+
+                <article class="card-servico">
+
+                    <div class="servico-img">
+
+                        <img src="WhatsApp Image 2026-09-28 at 14.01.39.jpeg" alt="Penteado profissional">
+
+                        <div class="servico-info">
+
+                            <h3>Penteado profissional</h3>
+
+                            <p>Tranças, presos e penteados elegantes para cada ocasião especial.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20Penteado%20profissional" target="_blank">AGENDAR →</a>
+
+                </article>
+
+
+
+                <article class="card-servico">
+
+                    <div class="servico-img">
+
+                        <img src="WhatsApp Image 2026-09-28 at 13.55.48.jpeg" alt="Alongamento de unhas">
+
+                        <div class="servico-info">
+
+                            <h3>Alongamento de unhas</h3>
+
+                            <p>Mãos impecáveis com acabamento refinado e durabilidade superior.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20Alongamento%20de%20unhas" target="_blank">AGENDAR →</a>
+
+                </article>
+
+
+
+                
+
+
+
+                <article class="card-servico">
+
+                    <div class="servico-img">
+
+                        <img src="WhatsApp Image 2026-09-21 at 18.15.14.jpeg" alt="Tranças nagô e box braids">
+
+                        <div class="servico-info">
+
+                            <h3>Tranças nagô e box braids</h3>
+
+                            <p>Tranças artísticas com técnica, estilo e proteção para seus fios.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20Tranças" target="_blank">AGENDAR →</a>
+
+                </article>
+
+
+
+                
+
+
+
+                
+
+
+
+                <article class="card-servico destaque">
+
+                    <div class="servico-img">
+
+                        <img src="a04b8ab7-53ec-467c-be06-42978c32ad96.jpg" alt="Limpeza de pele">
+
+                        <div class="servico-info">
+
+                            <h3>Limpeza de pele</h3>
+
+                            <p>Renovação e viço para uma pele luminosa, saudável e cuidada.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20Limpeza%20de%20pele" target="_blank">AGENDAR →</a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= EQUIPE ========================= -->
+
+        <section class="equipe-section" id="equipe">
+
+            <div class="section-head">
+
+                <span>NOSSA EQUIPE</span>
+
+                <h2>Profissionais que <em>cuidam de você</em></h2>
+
+                <p>Uma equipe completa e especialista, dedicada a proporcionar uma experiência inesquecível.</p>
+
+            </div>
+
+
+
+            <div class="equipe-grid">
+
+                <article>
+
+                    <div class="prof-img">
+
+                        <img src="WhatsApp Image 2026-09-21 at 11.48.43.jpeg" alt="Profissional Deborah">
+
+                        <div>
+
+                            <h3>Deborah</h3>
+
+                            <p>Cílios, sobrancelhas, maquiagem, lash lifting e brow lamination</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20com%20a%20Deborah" target="_blank">AGENDAR COM DEBORAH</a>
+
+                </article>
+
+
+
+                <article>
+
+                    <div class="prof-img">
+
+                        <img src="WhatsApp Image 2026-09-21 at 13.08.24.jpeg" alt="Profissional Maria">
+
+                        <div>
+
+                            <h3>Maria</h3>
+
+                            <p>Cílios e sobrancelhas</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20com%20a%20Maria" target="_blank">AGENDAR COM MARIA</a>
+
+                </article>
+
+
+
+                <article>
+
+                    <div class="prof-img">
+
+                        <img src="WhatsApp Image 2026-09-21 at 13.08.10.jpeg" alt="Profissional Lary">
+
+                        <div>
+
+                            <h3>Lary</h3>
+
+                            <p>Penteados, tranças nagô e box braids</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20com%20a%20Lary" target="_blank">AGENDAR COM LARY</a>
+
+                </article>
+
+
+
+                <article>
+
+                    <div class="prof-img">
+
+                        <img src="WhatsApp Image 2026-09-21 at 16.21.43.jpeg" alt="Profissional Ariane Silva">
+
+                        <div>
+
+                            <h3>Ariane Silva</h3>
+
+                            <p>Alongamento de unhas</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20com%20a%20Ariane" target="_blank">AGENDAR COM ARIANE SILVA</a>
+
+                </article>
+
+
+
+                <article>
+
+                    <div class="prof-img">
+
+                        <img src="WhatsApp Image 2026-09-21 at 13.08.54.jpeg" alt="Profissional Renata Coutinho">
+
+                        <div>
+
+                            <h3>Renata Coutinho</h3>
+
+                            <p>Limpeza de pele</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20agendar%20com%20a%20Renata" target="_blank">AGENDAR COM RENATA COUTINHO</a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= CURSOS ========================= -->
+
+        <section class="equipe-section" id="cursos" style="background: #eff8fd;">
+
+            <div class="section-head">
+
+                <span>CURSOS & FORMAÇÕES</span>
+
+                <h2>Aprenda com quem <em>é referência</em></h2>
+
+                <p>Domine técnicas avançadas, conquiste sua independência financeira e se destaque no mercado da beleza.</p>
+
+            </div>
+
+
+
+            <div class="equipe-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); justify-content: center;">
+
+                <article>
+
+                    <div class="prof-img">
+
+                        <img src="WhatsApp Image 2026-09-21 at 13.10.01.jpeg" alt="Curso VIP Individual - Studio Deborah Cristinny">
+
+                        <div>
+
+                            <h3>Turma VIP (Individual)</h3>
+
+                            <p>Mentoria 100% personalizada, aprendizado no seu ritmo e prática direta em modelo.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Curso%20VIP%20Individual" target="_blank">SAIBA MAIS SOBRE O CURSO VIP</a>
+
+                </article>
+
+
+
+                <article>
+
+                    <div class="prof-img">
+
+                        <img src="WhatsApp Image 2026-09-21 at 13.10.02.jpeg" alt="Curso em Grupo - Studio Deborah Cristinny">
+
+                        <div>
+
+                            <h3>Turma em Grupo</h3>
+
+                            <p>Imersão completa com turmas reduzidas, certificado e troca intensa de experiências.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Curso%20em%20Grupo" target="_blank">SAIBA MAIS SOBRE O CURSO EM GRUPO</a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= GALERIA ========================= -->
+
+        <section class="galeria-section" id="galeria">
+
+            <div class="section-head">
+
+                <span>NOSSO TRABALHO</span>
+
+                <h2>Resultados que valorizam <em>a sua beleza</em></h2>
+
+                <p>Cada atendimento é realizado com cuidado, técnica e dedicação.</p>
+
+            </div>
+
+
+
+            <div class="galeria-grid">
+
+                <img src="WhatsApp Image 2026-09-21 at 13.11.35.jpeg" alt="Resultado de procedimento - Studio Deborah">
+
+                <img src="WhatsApp Image 2026-09-21 at 13.16.45.jpeg" alt="Resultado de procedimento - Studio Deborah">
+
+                <img src="WhatsApp Image 2026-09-21 at 13.11.35 (1).jpeg" alt="Resultado de procedimento - Studio Deborah">
+
+                <img src="WhatsApp Image 2026-09-21 at 13.11.37.jpeg" alt="Resultado de procedimento - Studio Deborah">
+
+                <img src="WhatsApp Image 2026-09-21 at 13.16.56.jpeg" alt="Resultado de procedimento - Studio Deborah">
+
+                <img src="WhatsApp Image 2026-09-21 at 13.16.55.jpeg" alt="Resultado de procedimento - Studio Deborah">
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- ========================= NOIVAS ========================= -->
+
+        <section class="noivas-section" id="noivas">
+
+            <div class="noivas-intro">
+
+                <div class="noivas-kicker"><span>✦</span> EXPERIÊNCIA BRIDAL</div>
+
+                <h2>Seu grande dia merece <em>uma beleza inesquecível</em></h2>
+
+                <p>
+
+                    Um cuidado especial para noivas que desejam viver cada detalhe com leveza,
+
+                    elegância e segurança. Maquiagem, penteado e produção pensados para valorizar
+
+                    sua essência e fazer você se sentir ainda mais linda no seu grande dia.
+
+                </p>
+
+                <div class="noivas-tags">
+
+                    <span>MAQUIAGEM</span>
+
+                    <span>PENTEADO</span>
+
+                    <span>CÍLIOS</span>
+
+                    <span>PRODUÇÃO DA NOIVA</span>
+
+                </div>
+
+                <a class="noivas-whatsapp" target="_blank"
+
+                   href="https://wa.me/5561993708694?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20produção%20para%20noivas.">
+
+                    QUERO MEU ATENDIMENTO DE NOIVA <b>→</b>
+
+                </a>
+
+            </div>
+
+
+
+            <div class="noivas-carousel-wrap">
+
+                <div class="noivas-carousel" id="noivas-carousel">
+
+                    <article class="noivas-slide active">
+
+                        <img src="WhatsApp Image 2026-09-28 at 14.01.30.jpeg" alt="Maquiagem para noivas">
+
+                        <div class="noivas-caption">
+
+                            <span>01</span>
+
+                            <div><strong>Maquiagem Bridal</strong><small>Elegância, luminosidade e longa duração.</small></div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="noivas-slide">
+
+                        <img src="WhatsApp Image 2026-09-28 at 14.01.39.jpeg" alt="Penteado para noivas">
+
+                        <div class="noivas-caption">
+
+                            <span>02</span>
+
+                            <div><strong>Penteado da Noiva</strong><small>Produções delicadas e sofisticadas para o seu estilo.</small></div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="noivas-slide">
+
+                        <img src="WhatsApp Image 2026-09-21 at 13.16.43 (1).jpeg" alt="Cílios para noivas">
+
+                        <div class="noivas-caption">
+
+                            <span>03</span>
+
+                            <div><strong>Olhar Marcante</strong><small>Cílios pensados para valorizar sua maquiagem e suas fotos.</small></div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="noivas-slide">
+
+                        <img src="WhatsApp Image 2026-09-21 at 13.11.35.jpeg" alt="Produção especial para noivas">
+
+                        <div class="noivas-caption">
+
+                            <span>04</span>
+
+                            <div><strong>Produção Completa</strong><small>Cuidado em cada detalhe para um momento único.</small></div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <button class="noivas-arrow noivas-prev" id="noivas-prev" aria-label="Foto anterior">‹</button>
+
+                <button class="noivas-arrow noivas-next" id="noivas-next" aria-label="Próxima foto">›</button>
+
+
+
+                <div class="noivas-dots" id="noivas-dots">
+
+                    <button class="active" aria-label="Ir para foto 1"></button>
+
+                    <button aria-label="Ir para foto 2"></button>
+
+                    <button aria-label="Ir para foto 3"></button>
+
+                    <button aria-label="Ir para foto 4"></button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= DEPOIMENTOS ========================= -->
+
+        <section class="depoimentos">
+
+            <div class="section-head">
+
+                <span>EXPERIÊNCIAS REAIS</span>
+
+                <h2>O que nossas <em>clientes dizem</em></h2>
+
+                <div class="review-line">
+
+                    ★ ★ ★ ★ ★ <small>5,0 · 41 avaliações no Google</small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="depoimento-wrap">
+
+                <button id="prev" aria-label="Depoimento anterior">‹</button>
+
+
+
+                <div class="depoimento active">
+
+                    <b>"</b>
+
+                    <p>Experiência única, atendimento sensacional e profissionais capacitadas 💕✨</p>
+
+                    <span>CLIENTE GOOGLE</span>
+
+                </div>
+
+
+
+                <div class="depoimento">
+
+                    <b>"</b>
+
+                    <p>Espaço lindo demais, amo ir lá e me sentir maravilhosa 💖</p>
+
+                    <span>CLIENTE GOOGLE</span>
+
+                </div>
+
+
+
+                <div class="depoimento">
+
+                    <b>"</b>
+
+                    <p>Atendimento impecável, ambiente acolhedor e resultado maravilhoso.</p>
+
+                    <span>CLIENTE GOOGLE</span>
+
+                </div>
+
+
+
+                <button id="next" aria-label="Próximo depoimento">›</button>
+
+            </div>
+
+
+
+            <div class="dep-dots">
+
+                <i class="active"></i>
+
+                <i></i>
+
+                <i></i>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= DIFERENCIAIS ========================= -->
+
+        <section class="diferenciais">
+
+            <div class="section-head">
+
+                <span>POR QUE NÓS</span>
+
+                <h2>Por que escolher o <em>Studio</em></h2>
+
+            </div>
+
+
+
+            <div class="diferenciais-grid">
+
+                <article>
+
+                    <b>♧</b>
+
+                    <div>
+
+                        <h3>Equipe completa</h3>
+
+                        <p>Profissionais especializadas em cada área da beleza.</p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article>
+
+                    <b>♡</b>
+
+                    <div>
+
+                        <h3>Atendimento acolhedor</h3>
+
+                        <p>Um cuidado feito para você se sentir bem.</p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article>
+
+                    <b>⌂</b>
+
+                    <div>
+
+                        <h3>Ambiente aconchegante</h3>
+
+                        <p>Um espaço pensado para o seu bem-estar.</p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article>
+
+                    <b>◉</b>
+
+                    <div>
+
+                        <h3>Profissionais capacitadas</h3>
+
+                        <p>Técnica, experiência e excelência.</p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article>
+
+                    <b>✦</b>
+
+                    <div>
+
+                        <h3>Variedade de serviços</h3>
+
+                        <p>Tudo o que você precisa em um só lugar.</p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article>
+
+                    <b>◎</b>
+
+                    <div>
+
+                        <h3>Foco em autoestima</h3>
+
+                        <p>Beleza que fortalece sua confiança.</p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= JORNADA ========================= -->
+
+        <section class="jornada">
+
+            <div class="section-head">
+
+                <span>COMO FUNCIONA</span>
+
+                <h2>Sua jornada de <em>beleza</em></h2>
+
+            </div>
+
+
+
+            <div class="jornada-lista">
+
+                <div>
+
+                    <span>01</span>
+
+                    <div>
+
+                        <h3>Converse pelo WhatsApp</h3>
+
+                        <p>Você fala com a nossa equipe e tira suas dúvidas.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div>
+
+                    <span>02</span>
+
+                    <div>
+
+                        <h3>Escolha do procedimento</h3>
+
+                        <p>Encontramos o serviço ideal para o seu momento.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div>
+
+                    <span>03</span>
+
+                    <div>
+
+                        <h3>Agendamento de horário</h3>
+
+                        <p>Reservamos o melhor horário para você.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div>
+
+                    <span>04</span>
+
+                    <div>
+
+                        <h3>Atendimento especializado</h3>
+
+                        <p>Você é recebida e cuidada com todo carinho.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div>
+
+                    <span>05</span>
+
+                    <div>
+
+                        <h3>Resultado e confiança</h3>
+
+                        <p>Você sai ainda mais confiante e satisfeita.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <a target="_blank" href="https://wa.me/5561993708694" class="jornada-btn">COMEÇAR AGORA</a>
+
+        </section>
+
+
+
+        <!-- ========================= CTA FINAL ========================= -->
+
+        <section class="cta-final">
+
+            <span>AGENDE AGORA</span>
+
+            <h2>Seu momento de beleza <em>começa aqui</em></h2>
+
+            <p>Escolha o procedimento ideal para você e agende seu horário com uma equipe preparada para realçar ainda mais a sua beleza.</p>
+
+            <a target="_blank" href="https://wa.me/5561993708694">AGENDAR PELO WHATSAPP →</a>
+
+        </section>
+
+
+
+        <!-- ========================= CONTATO ========================= -->
+
+        <section class="contato-section" id="contato">
+
+            <div class="section-head">
+
+                <span>CONTATO</span>
+
+                <h2>Vamos conversar <em>sobre você</em></h2>
+
+            </div>
+
+
+
+            <div class="contato-grid">
+
+                <div class="contato-info">
+
+                    <a href="https://wa.me/5561993708694" target="_blank">
+
+                        <b>◉</b>
+
+                        <div>
+
+                            <span>WHATSAPP</span>
+
+                            <strong>(61) 99370-8694</strong>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="tel:+5561993708694">
+
+                        <b>⌕</b>
+
+                        <div>
+
+                            <span>TELEFONE</span>
+
+                            <strong>(61) 99370-8694</strong>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="https://instagram.com/deborah_cristinny" target="_blank">
+
+                        <b>◎</b>
+
+                        <div>
+
+                            <span>INSTAGRAM</span>
+
+                            <strong>@deborah_cristinny</strong>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <div class="info-card">
+
+                        <b>⌖</b>
+
+                        <div>
+
+                            <span>ENDEREÇO</span>
+
+                            <strong>Rua 19, Parque, Quadra 47 Lote 19 - Casa 02, Sol Nascente, Luziânia - GO, 72855-819</strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="info-card">
+
+                        <b>◷</b>
+
+                        <div>
+
+                            <span>HORÁRIO</span>
+
+                            <strong>Seg a Sáb — 09h às 19h</strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <a class="map-btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rua+19+Parque+Quadra+47+Lote+19+Casa+02+Sol+Nascente+Luziania+GO">
+
+                        VER NO MAPA
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="mapa-wrap">
+
+                    <iframe loading="lazy" title="Mapa do Studio" src="https://www.google.com/maps?q=Rua%2019%20Parque%20Quadra%2047%20Lote%2019%20Casa%2002%20Sol%20Nascente%20Luzi%C3%A2nia%20GO&amp;output=embed"></iframe>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ========================= FOOTER ========================= -->
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+
+            Studio Deborah Cristinny
+
+            <span>BELEZA & ESTÉTICA</span>
+
+        </div>
+
+
+
+        <p>Beleza, autoestima e sofisticação em cada detalhe — em Luziânia, Goiás.</p>
+
+
+
+        <div class="footer-social">
+
+            <a href="https://wa.me/5561993708694" target="_blank" aria-label="WhatsApp">◉</a>
+
+            <a href="https://instagram.com/deborah_cristinny" target="_blank" aria-label="Instagram">◎</a>
+
+            <a href="#contato" aria-label="Localização">⌖</a>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            Rua 19, Parque, Quadra 47 Lote 19 - Casa 02, Sol Nascente, Luziânia - GO, 72855-819<br>
+
+            © 2026 Studio Deborah Cristinny. Todos os direitos reservados.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+
+    <a href="https://wa.me/5561993708694" class="whatsapp-float" target="_blank" aria-label="Agendar via WhatsApp">
+
+        <span>Agendar</span>
+
+        <b>↗</b>
+
+    </a>
+
+
+
+
+
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const slides = Array.from(document.querySelectorAll('.noivas-slide'));
+
+        const dots = Array.from(document.querySelectorAll('#noivas-dots button'));
+
+        const prev = document.getElementById('noivas-prev');
+
+        const next = document.getElementById('noivas-next');
+
+        const carousel = document.getElementById('noivas-carousel');
+
+        if (!slides.length) return;
+
+
+
+        let bridalIndex = 0;
+
+        let bridalTimer;
+
+
+
+        function showBridal(index) {
+
+            bridalIndex = (index + slides.length) % slides.length;
+
+            slides.forEach((slide, i) => slide.classList.toggle('active', i === bridalIndex));
+
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === bridalIndex));
+
+        }
+
+        function startBridal() {
+
+            clearInterval(bridalTimer);
+
+            bridalTimer = setInterval(() => showBridal(bridalIndex + 1), 4800);
+
+        }
+
+
+
+        prev?.addEventListener('click', () => { showBridal(bridalIndex - 1); startBridal(); });
+
+        next?.addEventListener('click', () => { showBridal(bridalIndex + 1); startBridal(); });
+
+        dots.forEach((dot, i) => dot.addEventListener('click', () => { showBridal(i); startBridal(); }));
+
+        carousel?.addEventListener('mouseenter', () => clearInterval(bridalTimer));
+
+        carousel?.addEventListener('mouseleave', startBridal);
+
+
+
+        let touchX = 0;
+
+        carousel?.addEventListener('touchstart', e => touchX = e.changedTouches[0].screenX, {passive:true});
+
+        carousel?.addEventListener('touchend', e => {
+
+            const delta = e.changedTouches[0].screenX - touchX;
+
+            if (Math.abs(delta) > 45) showBridal(bridalIndex + (delta < 0 ? 1 : -1));
+
+            startBridal();
+
+        }, {passive:true});
+
+
+
+        showBridal(0);
+
+        startBridal();
+
+    });
+
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
